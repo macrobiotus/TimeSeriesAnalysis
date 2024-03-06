@@ -39,8 +39,8 @@ obj_name<-'timeSeries_obj_PBMC_example.Rdata'
 
 #Path to count data and sample data respectively
 #Not needed if using example data
-my_path_data<-'~/A_Projects/EpiGen/R_Work_Folder/TimeSeriesAnalysis/data/PBMC/raw_counts_TS'
-my_path_sample_dta<-'~/A_Projects/EpiGen/R_Work_Folder/TimeSeriesAnalysis/data/PBMC/sample_file.csv'
+my_path_data<-'/Users/paul/Documents/HM_MouseDynamics/5_external_git_repositories/TimeSeriesAnalysis/data/PBMC/raw_counts_TS'
+my_path_sample_dta<-'/Users/paul/Documents/HM_MouseDynamics/5_external_git_repositories/TimeSeriesAnalysis/data/PBMC/sample_file.csv'
 
 #Set-up time series object parameters
 diff_exp_type<-'DESeq2' #package used for DE – can also be 'limma'
