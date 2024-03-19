@@ -34,13 +34,13 @@ Set the below parameters for the downstream analysis
 ```{r parameter_setup}
 
 #Give names to saved object and name of results repository
-name_result_folder<-'TS_results_PBMC_example/'
-obj_name<-'timeSeries_obj_PBMC_example.Rdata'
+name_result_folder<-'/Users/paul/Documents/HM_MouseDynamics/1_analysis/tisa_input/brain'
+obj_name<-'tisa_output_brain.Rdata'
 
 #Path to count data and sample data respectively
 #Not needed if using example data
-my_path_data<-'/Users/paul/Documents/HM_MouseDynamics/5_external_git_repositories/TimeSeriesAnalysis/data/PBMC/raw_counts_TS'
-my_path_sample_dta<-'/Users/paul/Documents/HM_MouseDynamics/5_external_git_repositories/TimeSeriesAnalysis/data/PBMC/sample_file.csv'
+my_path_data <- '/Users/paul/Documents/HM_MouseDynamics/1_analysis/tisa_input/brain/tisa_counts.txt'
+my_path_sample_dta <- '/Users/paul/Documents/HM_MouseDynamics/1_analysis/tisa_input/brain/tisa_sampls.csv'
 
 #Set-up time series object parameters
 diff_exp_type<-'DESeq2' #package used for DE – can also be 'limma'
@@ -67,7 +67,8 @@ my_ont_sem_sim='BP'
 #mmusculus
 #hsapiens
 #celegans
-my_org_gpro='hsapiens' #Set the species for the gprofiler analysis
+#hsapiens
+my_org_gpro='mmusculus' #Set the species for the gprofiler analysis
 
 # The seed serves to create reproducible results with PART.
 # A seed will ensure that the random components of PART clustering will be the same
