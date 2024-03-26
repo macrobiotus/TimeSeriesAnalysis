@@ -212,7 +212,7 @@ It first retrieves the number of significant genes for PART clustering in the 's
 This chunk can be quite lengthy depending on the number of genes included
 for clustering as well as the number of recursions set for the clustering
 
-```{r run_PART ,message=FALSE,warning=FALSE}
+```{r run_PART, message=FALSE, warning=FALSE, error = TRUE}
 #Extract genes for PART clustering based on defined log(2)foldChange threshold
 signi_genes <- select_genes_with_l2fc(TS_object)
 
@@ -252,7 +252,7 @@ This will load the results saved after the PART clustering code chunk
 This code chunk will overwrite the saved object if it is completed. The overwritten
 object will then contain the gprofiler analysis results and can be used to generate
 plots with the downstream code chunks.
-```{r run_Gpro ,message=FALSE,warning=FALSE}
+```{r run_Gpro, message = FALSE, warning = FALSE, error = TRUE}
 # load('timeseries_obj_res.Rdata')
 TS_object <- run_gprofiler_PART_clusters(TS_object) #Run the gprofiler analysis
 
@@ -273,7 +273,7 @@ HTML files can be opened and then saved as PNG (or other) using the camera icon
 in the top right of each respective interactive plot
 
 
-```{r results_setup ,echo=FALSE,message=FALSE,warning=FALSE}
+```{r results_setup, echo=FALSE,message=FALSE,warning=FALSE, error = TRUE}
 
 # Calculate and plot the TimeSeries PCA
 
@@ -305,7 +305,7 @@ row.names(sample_dta)=NULL
 
 **PCA of sample data\:**    
    `r knitr::include_graphics(paste0(name_result_folder,"/PCA_plot.png"))`  
-```{r DE_results ,echo=FALSE,message=FALSE,warning=FALSE}
+```{r DE_results, echo=FALSE, message=FALSE, warning=FALSE, error = TRUE}
 
 #Create results for conditional and temporal differential gene expression results
 plot_wrapper_DE_results(object=TS_object,DE_type='conditional',genes_of_interest=genes_of_interest, results_folder = paste0(name_result_folder, "/"))
@@ -430,10 +430,12 @@ is compared against. For example, TP2_vs_TP1 would have the 'experiment' be TP2 
 while TP3_vs_TP2 would have TP3 as the 'experiment' and TP2 as the 'control'. Note that TP=time point.  
 
 **The conditional heatmap**  
-`r knitr::include_graphics(paste0(name_result_folder,"/DE_results_conditional/custom_heat_conditional.svg"))` 
+
+<!--`r knitr::include_graphics(paste0(name_result_folder,"/DE_results_conditional/custom_heat_conditional.svg"))`) -->
 
 **The temporal heatmap**  
-`r knitr::include_graphics(paste0(name_result_folder,"/DE_results_temporal/custom_heat_temporal.svg"))` 
+
+<!--`r knitr::include_graphics(paste0(name_result_folder,"/DE_results_temporal/custom_heat_temporal.svg"))`) -->
 
 ## Genes of interest results
 
